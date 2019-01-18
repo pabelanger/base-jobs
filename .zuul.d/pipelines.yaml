@@ -1,0 +1,29 @@
+---
+- pipeline:
+    name: check
+    description: |
+      Newly uploaded patchsets enter this pipeline to receive an
+      initial +/-1 Verified vote.
+    manager: independent
+    precedence: low
+    trigger:
+      github.com:
+        - event: pull_request
+          action:
+            - opened
+            - changed
+            - reopened
+        - event: pull_request
+          action: comment
+          comment: (?i)^\s*recheck\s*$
+    start:
+      github.com:
+        status: 'pending'
+        status-url: 'http://zw01.poctron.xyz/t/pabelanger/status'
+        comment: false
+    success:
+      github.com:
+        status: 'success'
+    failure:
+      github.com:
+        status: 'failure'
