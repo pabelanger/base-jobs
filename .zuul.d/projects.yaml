@@ -1,0 +1,5 @@
+- project:
+    name: github.com/pabelanger/base-jobs
+    check:
+      jobs:
+        - noop
