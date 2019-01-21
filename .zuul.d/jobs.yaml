@@ -1,6 +1,7 @@
 - job:
     name: base-minimal
     parent: null
+    pre-run: playbooks/base-minimal/pre.yaml
     nodeset:
       nodes:
         - name: ubuntu-bionic
