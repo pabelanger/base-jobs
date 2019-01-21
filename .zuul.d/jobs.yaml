@@ -1,0 +1,11 @@
+- job:
+    name: base-minimal
+    parent: null
+    nodeset:
+      nodes:
+        - name: ubuntu-bionic
+          label: ubuntu-bionic
+
+- job:
+    name: base
+    parent: base-minimal
