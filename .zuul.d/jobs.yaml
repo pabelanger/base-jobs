@@ -2,6 +2,8 @@
     name: base-minimal
     parent: null
     pre-run: playbooks/base-minimal/pre.yaml
+    roles:
+      - zuul: openstack-infra/zuul-jobs
     nodeset:
       nodes:
         - name: ubuntu-bionic
