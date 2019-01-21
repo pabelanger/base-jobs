@@ -4,7 +4,7 @@
     nodeset:
       nodes:
         - name: ubuntu-bionic
-          label: ubuntu-bionic
+          label: ubuntu-bionic-1vcpu
 
 - job:
     name: base
