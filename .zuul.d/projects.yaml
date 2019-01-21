@@ -2,4 +2,4 @@
     name: github.com/pabelanger/base-jobs
     check:
       jobs:
-        - noop
+        - tox-linters
