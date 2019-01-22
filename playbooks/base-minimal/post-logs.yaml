@@ -13,4 +13,5 @@
       include_role:
         name: upload-logs-swift
       vars:
+        zuul_log_container: vexxhost-poc-logs
         zuul_log_cloud_config: "{{ vexxhost_clouds_yaml }}"
