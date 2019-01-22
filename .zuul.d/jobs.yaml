@@ -2,8 +2,16 @@
     name: base-minimal
     parent: null
     pre-run: playbooks/base-minimal/pre.yaml
+    post-run:
+      - playbooks/base-minimal/post-logs.yaml
     roles:
       - zuul: openstack-infra/zuul-jobs
+    vars:
+      ara_report_type: html
+      ara_report_path: ara-report
+      ara_compress_html: false
+    secrets:
+      - vexxhost_clouds_yaml
     nodeset:
       nodes:
         - name: ubuntu-bionic
